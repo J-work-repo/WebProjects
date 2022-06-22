@@ -13,7 +13,7 @@ if(isset($_POST['deleteall'])){
     $sql="TRUNCATE TABLE order$nomeja;";
     $hasil = mysqli_query($conn, $sql);
     if($hasil){
-        header("location:$loc");
+        header("location:$loc#$nomeja");
     }else{die(mysqli_error($conn));}
 }
 ?>
@@ -57,7 +57,7 @@ if(isset($_POST['deleteall'])){
     </nav>
 
     <div class="container">
-        <h1>Cashier</h1>
+        <h1 id="<?php echo $nomeja ?>">Cashier</h1>
         <br>
         <?php
         $i = 0;
@@ -68,7 +68,7 @@ if(isset($_POST['deleteall'])){
             $result = mysqli_query($conn, $sql);
             if ($result) {
                 $total = 0 ;
-                echo '<br><center><h2>Meja Nomor ' . $nomeja . '</h2></center><br>';
+                echo '<br><center><h2 id="'.$nomeja.'">Meja Nomor ' . $nomeja . '</h2></center><br>';
         ?>
                 <table class="table">
                     <thead>

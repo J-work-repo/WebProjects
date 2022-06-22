@@ -58,7 +58,7 @@ $jummj = $jumltbl;
             $sql = "select * from order$nomeja where `paid` = 'Process'";
             $result = mysqli_query($conn, $sql);
             if ($result) {
-                echo '<br><center><h2>Meja Nomor ' . $nomeja . '</h2></center><br>';
+                echo '<br><center><h2 id="'.$nomeja.'">Meja Nomor ' . $nomeja . '</h2></center><br>';
         ?>
                 <table class="table">
                     <thead>

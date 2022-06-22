@@ -72,6 +72,9 @@ where `id` = '$truid';
             <li class="nav-item">
                 <a class="nav-link active" href="shopcart.php">Shopping Cart</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="order.php">Order</a>
+            </li>
         </ul>
     </nav>
 

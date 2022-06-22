@@ -8,7 +8,7 @@ if(isset($_POST['Done'])){
     $sql="update `order$nomeja` set `paid` = 'Terbuat' where `id` = '$id'";
     $hasil = mysqli_query($conn, $sql);
     if($hasil){
-        header("location:administrator/server.php");
+        header("location:administrator/server.php#$nomeja");
     }else{die(mysqli_error($conn));}
 
 }
@@ -20,7 +20,7 @@ if(isset($_POST['delete'])){
     $sql="delete from order$nomeja where id='$id'";
     $hasil = mysqli_query($conn, $sql);
     if($hasil){
-        header("location:$loc");
+        header("location:$loc#$nomeja");
     }else{die(mysqli_error($conn));}
 }
 
